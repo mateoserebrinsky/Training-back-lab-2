@@ -1,10 +1,10 @@
 FROM node:18-alpine
 
-WORKDIR /usr/src/my-app
+WORKDIR /usr/src/app
 
-COPY my-app/package*.json ./
+COPY app/package*.json ./
 RUN npm install
 
-COPY my-app/. .
+COPY app/. .
 
 CMD ["npm", "run", "start:dev"]
